@@ -1,6 +1,27 @@
-﻿.post-container {
-  background-color: rgba(37, 173, 228, 0.15);
+﻿img {
+  max-width: 85vw;
+  max-height: 40vh;
+}
+.posts-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 95vw;
+}
+
+.post-container {
+  background-color: #D3BCC0;
   text-align: center;
   margin-bottom: 1rem;
   padding: .5rem;
+}
+.buttonclass{
+  margin-left: 1rem;
+  background-color: #A5668B;
+  padding: .3rem;
+  border-radius: .5rem;
+  font-weight: bold;
+}
+.messageclass{
+  background-color: #F2D7EE;
 }

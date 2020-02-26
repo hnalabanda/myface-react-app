@@ -5,24 +5,27 @@ function Allposts(props) {
     
    
         return (
-            <section className="post-container">
+            <article className="posts-container">
+        
                 {props.allposts.map((post) => (
+                    <section className="post-container">
                     <div>
                         <p><b>Posted By:{post.postedBy.firstName}{post.postedBy.lastName}</b>
                             <a></a> PostedAt{post.postedAt}</p>
                         <img src={post.imageUrl}></img>
-                        <p>{post.message}</p>
+                        <p className="messageclass">{post.message}</p>
                         <div>
                             <img></img>
                             <img/>
-                            <a>Click here to remove this post</a>
+                            <a className="buttonclass">Remove post</a>
                         </div>
                     </div>
-
+                    </section>
 
                 ))}
 
-            </section>
+          
+            </article>    
         )
    
 }

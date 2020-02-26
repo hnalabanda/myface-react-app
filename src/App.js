@@ -18,11 +18,8 @@ function App() {
     );
        
     return (
-        <html>
-        <head>
-            <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet"/>
-           
-        </head>
+     
+ 
      
             <body>
             <div>
@@ -33,7 +30,7 @@ function App() {
             </div>
 
             </body>
-        </html>
+     
     
      
        
