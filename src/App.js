@@ -1,26 +1,52 @@
-import React from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {Header} from "./Header/Header"
+import {Footer} from "./Footer/Footer"
+import Posts from "./Posts/Posts"
+import Allposts from "./allposts/allposts";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [allposts,setAllPosts]=useState([]);
+    
+    useEffect(
+        () => fetch('https://localhost:5001/posts')
+            .then(result => result.json())
+            .then(data => setAllPosts(data.items))
+        , []
+    );
+       
+    return (
+        <div>
+            <Posts count={allposts.length}></Posts>
+            <Allposts allposts={allposts}/>
+        </div>
+       
+
+    );
 }
+
+/*class App extends Component{
+    state={
+        allposts:[]
+    }
+    componentDidMount(){
+        fetch('https://localhost:5001/posts')
+            .then((result)=>{
+                return result.json();
+            })
+            .then((data)=>{
+                this.setState({allposts:data})
+                console.log(data);
+            })
+    }
+    render(){
+        return (
+            <Allposts allposts={this.state.allposts}/>
+
+        ); 
+    }
+ 
+}*/
 
 export default App;
