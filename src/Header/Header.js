@@ -6,7 +6,7 @@ function Header() {
     return (
         <header>
             <nav>
-                <ul>
+                <ul class="myface-banner">
                     <li>
                         <a>Home</a>
                     </li>

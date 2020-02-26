@@ -7,8 +7,8 @@ function Posts(props){
     
         return(
             
-            <div>
-                {props.count} Posts on {currentDate} {let currentDate=new Date();document.write( currentDate.getDate()+"-"+currentDate.getMonth()+"-"+currentDate.getFullYear());}
+            <div className="posts-menu">
+                {props.count} Posts on {currentDate.getDate() + "-" + currentDate.getMonth()+"-"+currentDate.getFullYear()} 
                     <a>Create a new post</a>
             </div>
         );

@@ -1,10 +1,11 @@
 ﻿import React from 'react'
+import './allposts.scss';
 
 function Allposts(props) {
     
    
         return (
-            <section>
+            <section className="post-container">
                 {props.allposts.map((post) => (
                     <div>
                         <p><b>Posted By:{post.postedBy.firstName}{post.postedBy.lastName}</b>

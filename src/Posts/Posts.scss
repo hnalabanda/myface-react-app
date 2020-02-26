@@ -1,0 +1,14 @@
+﻿.posts-menu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding: 1rem;
+  font-size: 1em;
+}
+.posts-menu a{
+  margin-left: 1rem;
+  background-color: rgba(254, 197, 30, 0.67);
+  padding: .3rem;
+  border-radius: .5rem;
+  font-weight: bold;
+}

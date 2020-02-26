@@ -2,9 +2,10 @@ import React, {Component, useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import {Header} from "./Header/Header"
-import {Footer} from "./Footer/Footer"
+import Footer from "./Footer/Footer"
 import Posts from "./Posts/Posts"
 import Allposts from "./allposts/allposts";
+
 
 function App() {
     const [allposts,setAllPosts]=useState([]);
@@ -17,10 +18,24 @@ function App() {
     );
        
     return (
-        <div>
-            <Posts count={allposts.length}></Posts>
-            <Allposts allposts={allposts}/>
-        </div>
+        <html>
+        <head>
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet"/>
+           
+        </head>
+     
+            <body>
+            <div>
+                <Header/>
+                <Posts count={allposts.length}></Posts>
+                <Allposts allposts={allposts}/>
+                <Footer/>
+            </div>
+
+            </body>
+        </html>
+    
+     
        
 
     );
