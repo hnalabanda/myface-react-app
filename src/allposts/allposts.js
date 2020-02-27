@@ -10,13 +10,13 @@ function Allposts(props) {
                 {props.allposts.map((post) => (
                     <section className="post-container">
                     <div>
-                        <p><b>Posted By:{post.postedBy.firstName}{post.postedBy.lastName}</b>
+                      <p><b>Posted By:{post.postedBy.firstName}{post.postedBy.lastName}</b>
                             <a></a> PostedAt{post.postedAt}</p>
                         <img src={post.imageUrl}></img>
                         <p className="messageclass">{post.message}</p>
                         <div>
-                            <img></img>
-                            <img/>
+                            <img src={'like.png'}></img>
+                            <img src='dislike.png'/>
                             <a className="buttonclass">Remove post</a>
                         </div>
                     </div>

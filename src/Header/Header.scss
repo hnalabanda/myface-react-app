@@ -1,13 +1,43 @@
-﻿nav {
-  background-color: #0E103D;
-  color:white;
-  height: 60px;
+﻿@import "../App.scss";
+li{
+  padding-left: 1em;
 }
-.myface-banner{
+
+.bannerdiv{
+  background: #0E103D;
+}
+
+.main-nav {
   display: flex;
-  flex-flow: row wrap;
+  background: $headerBgColor;
+  color: $headerFontColor;
   list-style-type: none;
-  justify-content: flex-end;
   margin:0;
-  background: #69306D;
+
+  li:first-child {
+    margin-right: auto;
+  }
+
+  a {
+    background: $headerBgColor;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    
+    &:hover {
+      background: $postContainerColor;
+      color:$headerBgColor;
+      font-weight: bolder;
+    }
+  }
+ 
+}
+
+
+
+
+.main-nav .logo {
+  font-family: 'Kaushan Script';
+  font-size: 2em;
+  color: $headerFontColor;
 }

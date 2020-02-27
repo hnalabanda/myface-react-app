@@ -21,7 +21,7 @@ function App() {
      
  
      
-            <body>
+          
             <div>
                 <Header/>
                 <Posts count={allposts.length}></Posts>
@@ -29,7 +29,7 @@ function App() {
                 <Footer/>
             </div>
 
-            </body>
+         
      
     
      

@@ -5,8 +5,13 @@ import './Header.scss';
 function Header() {
     return (
         <header>
+            <div>
+           
             <nav>
-                <ul class="myface-banner">
+                <ul className="main-nav">
+                    <li>
+                        <a className="logo">MyFace</a>
+                    </li>
                     <li>
                         <a>Home</a>
                     </li>
@@ -22,6 +27,8 @@ function Header() {
                 </ul>
 
             </nav>
+            </div>  
+            <div className="bannerdiv">.</div>
         </header>
 
     );

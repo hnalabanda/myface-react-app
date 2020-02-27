@@ -1,4 +1,8 @@
-﻿img {
+﻿@import "../App.scss";
+
+
+img {
+ 
   max-width: 85vw;
   max-height: 40vh;
 }
@@ -7,21 +11,32 @@
   flex-direction: row;
   align-items: center;
   max-width: 95vw;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .post-container {
-  background-color: #D3BCC0;
+  background-color: $postContainerColor;
   text-align: center;
   margin-bottom: 1rem;
   padding: .5rem;
 }
 .buttonclass{
   margin-left: 1rem;
-  background-color: #A5668B;
+  background-color: $buttonColor;
   padding: .3rem;
   border-radius: .5rem;
   font-weight: bold;
+ 
+  
+  &:hover{
+    background-color: $postContainerColor;
+    border-style: solid;
+    border-color:$headerBgColor ;
+  }
 }
 .messageclass{
-  background-color: #F2D7EE;
+  background-color: $postColor;
+  border-radius: .5rem;
+  border-color: $buttonColor;
 }
