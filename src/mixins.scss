@@ -1,0 +1,18 @@
+﻿@import "App";
+
+@mixin button() {
+  margin-left: 1rem;
+  background-color: $headerBgColor;
+  color:$headerFontColor;
+  padding: .3rem;
+  border-radius: .5rem;
+  font-weight: bold;
+
+
+  &:hover{
+    background-color: $postContainerColor;
+    border-style: solid;
+    border-color:$headerBgColor ;
+    color:#000000;
+  }
+}
