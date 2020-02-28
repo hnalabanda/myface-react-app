@@ -1,10 +1,20 @@
 ﻿@import "../App.scss";
-
+@import "../mixins.scss";
 
 img {
  
   max-width: 85vw;
   max-height: 40vh;
+}
+.profileClass{
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  text-align: left;
+  padding:.3em;
+}
+.post-header{
+  background-color:#A5668B;
 }
 .posts-container{
   display: flex;
@@ -17,23 +27,12 @@ img {
 
 .post-container {
   background-color: $postContainerColor;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
   padding: .5rem;
 }
 .buttonclass{
-  margin-left: 1rem;
-  background-color: $buttonColor;
-  padding: .3rem;
-  border-radius: .5rem;
-  font-weight: bold;
- 
-  
-  &:hover{
-    background-color: $postContainerColor;
-    border-style: solid;
-    border-color:$headerBgColor ;
-  }
+  @include button();
 }
 .messageclass{
   background-color: $postColor;

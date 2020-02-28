@@ -1,64 +1,27 @@
-import React, {Component, useEffect, useState} from 'react';
-import logo from './logo.svg';
-import './App.scss';
-import {Header} from "./Header/Header"
-import Footer from "./Footer/Footer"
-import Posts from "./Posts/Posts"
-import Allposts from "./allposts/allposts";
-
-
-function App() {
-    const [allposts,setAllPosts]=useState([]);
-    
-    useEffect(
-        () => fetch('https://localhost:5001/posts')
-            .then(result => result.json())
-            .then(data => setAllPosts(data.items))
-        , []
-    );
-       
+import React from 'react';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import ListPosts from "./ListPosts/ListPosts";
+import Header from "./Header/Header";
+import UserPage from "./UserPage/UserPage";
+export function App() {
     return (
-     
- 
-     
-          
-            <div>
-                <Header/>
-                <Posts count={allposts.length}></Posts>
-                <Allposts allposts={allposts}/>
-                <Footer/>
-            </div>
-
-         
-     
-    
-     
-       
-
+        <Router>
+           <Header/>
+            <Switch>
+                <Route path="/posts">
+                    <ListPosts/>
+                </Route>
+                <Route path="/users/:id">
+                  <UserPage/>
+                </Route>
+                <Route path="">
+                    <div>Sorry - that page doesn't exist, try these:</div>
+                    <Link to="/posts"/>
+                    <Link to="/users"/>
+                </Route>
+            </Switch>
+        </Router>
     );
 }
-
-/*class App extends Component{
-    state={
-        allposts:[]
-    }
-    componentDidMount(){
-        fetch('https://localhost:5001/posts')
-            .then((result)=>{
-                return result.json();
-            })
-            .then((data)=>{
-                this.setState({allposts:data})
-                console.log(data);
-            })
-    }
-    render(){
-        return (
-            <Allposts allposts={this.state.allposts}/>
-
-        ); 
-    }
- 
-}*/
 
 export default App;

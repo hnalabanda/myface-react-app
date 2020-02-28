@@ -1,5 +1,9 @@
 ﻿@import "../App.scss";
 
+textarea{
+  width:100%;
+}
+
 .posts-menu {
   display: flex;
   flex-direction: row;
@@ -11,7 +15,8 @@
 
 .buttonclass{
   margin-left: 1rem;
-  background-color: $buttonColor;
+  background-color: $headerBgColor;
+  color:$headerFontColor;
   padding: .3rem;
   border-radius: .5rem;
   font-weight: bold;
@@ -32,20 +37,25 @@
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: $postContainerColor;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%; /* Could be more or less, depending on screen size */
+ 
+
+  width: 30%; /* Could be more or less, depending on screen size */
 
 }
 .modal-header {
-  padding: 2px 16px;
-  background-color: rgb(0,128,157);
-  color: white;
+ 
+  background-color:$buttonColor;
+  color:$headerFontColor;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+  padding: 2px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 .modal-footer {
   padding: 2px 16px;

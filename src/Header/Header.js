@@ -10,7 +10,7 @@ function Header() {
             <nav>
                 <ul className="main-nav">
                     <li>
-                        <a className="logo">MyFace</a>
+                        <a className="logo" href="">MyFace</a>
                     </li>
                     <li>
                         <a>Home</a>
@@ -34,4 +34,4 @@ function Header() {
     );
 }
 
-export {Header};
+export default Header;

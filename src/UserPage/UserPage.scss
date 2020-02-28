@@ -1,0 +1,20 @@
+﻿@import "../App.scss";
+.userpage-background{
+  background-color:$postContainerColor ;
+}
+.user-info{
+ margin-left: 10rem;
+}
+.coverpage{
+  width:100%;
+  max-width: 100vw;
+  max-height: 40vh;
+}
+.profile-image{
+  width: 10%; /* Could be more or less, depending on screen size */
+  position:absolute; top:17em; left:10rem;
+}
+.display-name{
+  font-size: larger ;
+  font-weight: bolder;
+}
